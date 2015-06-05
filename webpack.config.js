@@ -6,7 +6,7 @@ const OUTPUT_DIR = path.join(__dirname, 'dist');
 
 module.exports = {
   devtool: 'source-map',
-  entry: path.join(SRC_DIR, 'app.js'),
+  entry: path.join(SRC_DIR, 'app.jsx'),
   output: {
     path: OUTPUT_DIR,
     filename: 'bundle.js'
