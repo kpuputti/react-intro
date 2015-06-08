@@ -1,10 +1,11 @@
+import './app.postcss';
+
 import React from 'react';
+import SlidesContainer from './SlidesContainer.jsx';
+import { SLIDES_LENGTH } from './slides.jsx';
 
 const KEYCODE_ARROW_LEFT = 37;
 const KEYCODE_ARROW_RIGHT = 39;
-
-// TODO: get this properly from somewhere.
-const SLIDES_LENGTH = 10;
 
 // Return current URL hash without the # character.
 function currentHash() {
@@ -92,7 +93,7 @@ class App extends React.Component {
     console.log('App.render() with hash:', currentHash());
     return (
       <section className='App'>
-        <p>Slide { this.state.currentSlideIndex }</p>
+        <SlidesContainer index={ this.state.currentSlideIndex }/>
       </section>
     );
   }

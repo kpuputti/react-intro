@@ -1,5 +1,6 @@
 /*eslint-env node */
 const path = require('path');
+const postCSSNested = require('postcss-nested');
 
 const SRC_DIR = path.join(__dirname, 'src');
 const OUTPUT_DIR = path.join(__dirname, 'dist');
@@ -17,7 +18,12 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel?optional[]=runtime'
+      },
+      {
+        test: /\.postcss$/,
+        loader: 'style-loader!css-loader!postcss-loader'
       }
     ]
-  }
+  },
+  postcss: [ postCSSNested ]
 };
