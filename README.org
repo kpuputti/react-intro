@@ -1,0 +1,123 @@
+* Introduction to React
+
+TODO: link to slides
+
+** Ideas
+
+- zen of python
+- unix philosophy
+- pure functions
+
+** Structure
+
+*** History of web dev
+
+- simple stateless request/response model
+- enhancing interactivity with Ajax
+- jQuery spaghetti
+- MVC frameworks
+- ideally stateless views (Backbone example)
+- MVC spaghetti
+  - LMS-like example
+    - string event binding
+    - model event binding
+    - adding subviews
+    - adding subview els to the DOM
+    - managing state
+    - rendering state
+
+*** Fundamental ideas
+
+- Beauty of Python
+- The UNIX philosophy
+- Immutability from group up with Clojure
+- Data vs. code in LISP and using macros for language extension
+- Composing functions in Haskell, type inference
+
+*** First Reactions
+
+- HTML in JavaScript
+- Reinventing the DOM
+- Inline event handlers
+
+*** What React really is?
+
+- V in MVC
+- DOM is slow, embrace fast JS engines, CPU over memory
+- Components, components, components
+- Easy composition
+- Reusability
+- Embrace JavaScript
+- Open sourced by Facebook
+- Battle tested (FB, Instagram, Netflix, Yahoo Mail)
+
+*** What React enables
+
+- Predictability
+- Simplicity
+- Testability
+- Performance
+- Explicitness
+
+*** VDOM
+
+- V8 and fast JS engines
+- Conceptually always re-render everything
+- Describe your component based on some data
+- Create a VDOM representation
+  - React makes the minimal actual DOM operations
+
+*** JSX
+
+- Cohesion, decoupling
+- Separation of concern
+
+*** Demo
+
+- Simple interactive react app from scratch?
+
+*** Lifecycle hooks
+
+- Plays well
+- Hackable
+- Explicit cleanup, lower memory usage
+
+*** Prop types
+
+- Runtime type checking
+- Compile-time (transpilation-time)type checking with Flow
+- Simple types
+- Compound types
+
+*** Mixins
+
+
+
+*** Extra
+
+- ES6 support with babel.js
+- Flow type support
+- Isomorphic JavaScript support
+- Using with Web Components
+- Immutable data structures
+
+*** In practice
+
+- Simple model to think in
+  - Scales with complexity
+- Very good warnings
+- Good linting support (ESLint + eslint-plugin-react)
+- Deciding where to store state
+  - Container components
+- Unidirectional data flow
+
+*** Cons
+
+- Requires change in thinking
+- Not easily understandable under-the-hood as Backbone
+- JSX requires more from your editor/tooling
+
+*** Summary
+
+- Got excited because of LMS issues
+- Other framewors are bringing in the VDOM model
