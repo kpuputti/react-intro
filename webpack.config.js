@@ -1,6 +1,6 @@
 /*eslint-env node */
 const path = require('path');
-const postCSSNested = require('postcss-nested');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const SRC_DIR = path.join(__dirname, 'src');
 const OUTPUT_DIR = path.join(__dirname, 'dist');
@@ -21,9 +21,16 @@ module.exports = {
       },
       {
         test: /\.postcss$/,
-        loader: 'style-loader!css-loader!postcss-loader'
+        loader: ExtractTextPlugin.extract('css?sourceMap!postcss-loader')
       }
     ]
   },
-  postcss: [ postCSSNested ]
+  plugins: [
+    new ExtractTextPlugin('bundle.css')
+  ],
+  postcss: [
+    require('postcss-nested'),
+    require('postcss-simple-vars'),
+    require('autoprefixer-core')({ browsers: [ 'last 2 version' ] })
+  ]
 };

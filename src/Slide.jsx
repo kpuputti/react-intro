@@ -1,4 +1,4 @@
-import './Slide.postcss'
+import './Slide.postcss';
 
 import React from 'react';
 
@@ -14,6 +14,7 @@ export default class Slide extends React.Component {
 }
 
 Slide.propTypes = {
+  className: React.PropTypes.string,
   title: React.PropTypes.string,
   children: React.PropTypes.any
 };

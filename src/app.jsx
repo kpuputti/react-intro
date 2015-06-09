@@ -2,6 +2,7 @@ import './app.postcss';
 
 import React from 'react';
 import SlidesContainer from './SlidesContainer.jsx';
+import Progress from './Progress.jsx';
 import { SLIDES_LENGTH } from './slides.jsx';
 
 const KEYCODE_ARROW_LEFT = 37;
@@ -91,9 +92,15 @@ class App extends React.Component {
   }
   render() {
     console.log('App.render() with hash:', currentHash());
+    const index = this.state.currentSlideIndex;
+    const progress = index !== 0 ? (
+      <Progress index={ index }
+                total={ SLIDES_LENGTH }/>
+    ) : null;
     return (
       <section className='App'>
-        <SlidesContainer index={ this.state.currentSlideIndex }/>
+        { progress }
+        <SlidesContainer index={ index }/>
       </section>
     );
   }
