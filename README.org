@@ -1,3 +1,6 @@
 * Introduction to React
 
-TODO: link to slides
+Slides available at [[http://kpuputti.github.io/react-intro/]]
+
+Use the arrow keys to go to previous/next slide or shift+arrow to go
+to first/last slide.
